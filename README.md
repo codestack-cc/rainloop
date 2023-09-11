@@ -1,6 +1,4 @@
-# hardware/rainloop
-
-![](https://i.goopics.net/nI.png)
+# shis95/rainloop
 
 ### What is this ?
 
@@ -27,8 +25,8 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 
 | Variable | Description | Type | Default value |
 | -------- | ----------- | ---- | ------------- |
-| **UID** | rainloop user id | *optional* | 991
-| **GID** | rainloop group id | *optional* | 991
+| **UID** | rainloop user id | *optional* | 100
+| **GID** | rainloop group id | *optional* | 1000
 | **UPLOAD_MAX_SIZE** | Attachment size limit | *optional* | 25M
 | **LOG_TO_STDOUT** | Enable nginx and php error logs to stdout | *optional* | false
 | **MEMORY_LIMIT** | PHP memory limit | *optional* | 128M
@@ -40,14 +38,12 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 # https://github.com/hardware/mailserver/blob/master/docker-compose.sample.yml
 
 rainloop:
-  image: hardware/rainloop
+  image: shis95/rainloop
   container_name: rainloop
   volumes:
     - /mnt/docker/rainloop:/rainloop/data
-  depends_on:
-    - mailserver
 ```
 
 #### How to setup
 
-https://github.com/hardware/mailserver/wiki/Rainloop-initial-configuration
+https://github.com/codestack-cc/rainloop
