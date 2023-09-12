@@ -5,7 +5,7 @@ LABEL description "Rainloop is a simple, modern & fast web-based client" \
 
 ARG GPG_FINGERPRINT="3B79 7ECE 694F 3B7B 70F3  11A4 ED7C 49D9 87DA 4591"
 
-ENV UID=100 GID=1000 UPLOAD_MAX_SIZE=25M LOG_TO_STDOUT=false MEMORY_LIMIT=128M
+ENV UID=1000 GID=100 UPLOAD_MAX_SIZE=25M LOG_TO_STDOUT=false MEMORY_LIMIT=128M TZ=Asia/Shanghai
 
 RUN echo "https://nl.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories \
  && apk -U upgrade \
@@ -14,6 +14,7 @@ RUN echo "https://nl.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/reposit
     openssl \
     wget \
  && apk add \
+    tzdata \
     ca-certificates \
     nginx \
     s6 \

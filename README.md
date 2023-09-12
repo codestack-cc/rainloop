@@ -10,7 +10,7 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 - Based on Alpine
 - Latest Rainloop **Community Edition** (stable)
 - Contacts (DB) : sqlite, mysql or pgsql (server not built-in)
-- With Nginx and PHP7
+- With Nginx and PHP8.2
 - Postfixadmin-change-password plugin
 
 ### Build-time variables
@@ -25,8 +25,9 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 
 | Variable | Description | Type | Default value |
 | -------- | ----------- | ---- | ------------- |
-| **UID** | rainloop user id | *optional* | 100
-| **GID** | rainloop group id | *optional* | 1000
+| **UID** | rainloop user id | *optional* | 1000
+| **GID** | rainloop group id | *optional* | 100
+| **TZ** | rainloop tzdate | *optional* | Asia/Shanghai
 | **UPLOAD_MAX_SIZE** | Attachment size limit | *optional* | 25M
 | **LOG_TO_STDOUT** | Enable nginx and php error logs to stdout | *optional* | false
 | **MEMORY_LIMIT** | PHP memory limit | *optional* | 128M
@@ -35,7 +36,6 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 
 ```yml
 # Full example :
-# https://github.com/hardware/mailserver/blob/master/docker-compose.sample.yml
 
 rainloop:
   image: shis95/rainloop
@@ -47,3 +47,8 @@ rainloop:
 #### How to setup
 
 https://github.com/codestack-cc/rainloop
+
+
+### Express Thanks
+
+> Thank [hardware](https://github.com/hardware) [rainloop](https://github.com/hardware/rainloop) Upgrades made by this project on this project.
